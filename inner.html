@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="page-header">
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-list-item"><a href="#">Информация</a></li>
+            <li class="main-nav-list-item"><a href="#">Фото и видео</a></li>
+            <li class="main-nav-list-item"><a href="#">Карта штата</a></li>
+            <li class="main-nav-list-item"><a href="#">Гостиницы</a></li>
+          </ul>
+        </nav>
+        <div class="page-header-logo">
+          <img src="#" alt="Сity of Sedona">
+        </div>
+      </header>
+      <main>
+        <section class="select-menu">
+          <p>Инфрструктура:</p>
+          <ul class="select-menu-list">
+            <li class="select-menu-list-item"><input type="checkbox">Басейн</li>
+            <li class="select-menu-list-item"><input type="checkbox">Парковка</li>
+            <li class="select-menu-list-item"><input type="checkbox">Wi-fi</li>
+          </ul>
+          <p>Тип жилья</p>
+          <ul class="select-menu-list">
+            <li class="select-menu-list-item"><input type="checkbox">Гостиница</li>
+            <li class="select-menu-list-item"><input type="checkbox">Мотель</li>
+            <li class="select-menu-list-item"><input type="checkbox">Апартаменты</li>
+          </ul>
+          <form method="post">
+            <label for="cost">Стоимость в сутки(Р):</label>
+            <input type="range" id="cost">
+          </form>
+          <button type="button" class="btn-form">Показать</button>
+        </section>
+        <section class="result">
+          <p>Найдено: 3</p>
+          <p>Сортировка:</p>
+          <a href="#">По цене</a>
+          <a href="#">По типу</a>
+          <a href="#">По рейтингу</a>
+        </section>
+        <section class="result-item-amara">
+          <img src="#" alt="amara">
+          <b>Amara Resort & SPA</b>
+          <p>Гостиница от 3500р.</p>
+          <button type="button" class="btn-result-details">Подробнее</button>
+          <button type="button" class="btn-result-reserv">Забронировать</button>
+          <p>Рейтинг: 8,5</p>
+        </section>
+        <section class="result-item-desert">
+          <img src="#" alt="desert">
+          <b>Desert Quail Inn</b>
+          <p>Мотель от 2000р.</p>
+          <button type="button" class="btn-result-details">Подробнее</button>
+          <button type="button" class="btn-result-reserv">Забронировать</button>
+          <p>Рейтинг: 8,9</p>
+        </section>
+        <section class="result-item-villas">
+          <img src="#" alt="villas">
+          <b>Villas at poco diablo</b>
+          <p>Апартаменты от 4000р.</p>
+          <button type="button" class="btn-result-details">Подробнее</button>
+          <button type="button" class="btn-result-reserv">Забронировать</button>
+          <p>Рейтинг: 9,2</p>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <a href="#">#Visitsedona</a>
+        <section class="footer-social">
+          <a href="#" class="social-btn social-btn-twt">Twitter</a>
+          <a href="#" class="social-btn social-btn-fb">Facebook</a>
+          <a href="#" class="social-btn social-btn-yt">Youtube</a>
+        </section>
+        <div class="footer-logo">
+          <img src="#" alt="HTML academy">
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
