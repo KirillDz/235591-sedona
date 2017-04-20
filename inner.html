@@ -20,56 +20,106 @@
         </div>
       </header>
       <main>
-        <section class="select-menu">
-          <p>Инфрструктура:</p>
-          <ul class="select-menu-list">
-            <li class="select-menu-list-item"><input type="checkbox">Басейн</li>
-            <li class="select-menu-list-item"><input type="checkbox">Парковка</li>
-            <li class="select-menu-list-item"><input type="checkbox">Wi-fi</li>
-          </ul>
-          <p>Тип жилья</p>
-          <ul class="select-menu-list">
-            <li class="select-menu-list-item"><input type="checkbox">Гостиница</li>
-            <li class="select-menu-list-item"><input type="checkbox">Мотель</li>
-            <li class="select-menu-list-item"><input type="checkbox">Апартаменты</li>
-          </ul>
-          <form method="post">
-            <label for="cost">Стоимость в сутки(Р):</label>
-            <input type="range" id="cost">
+        <section class="filters">
+          <form action="index.html" method="post">
+            <div class="filter-item">
+              <p>Инфрструктура:</p>
+              <ul class="select-menu-list">
+                <li class="select-menu-list-item">
+                  <label for="pool">Басейн</label>
+                  <input type="checkbox" id="pool"></li>
+                <li class="select-menu-list-item">
+                  <label for="park">Парковка</label>
+                  <input type="checkbox" id="park"></li>
+                <li class="select-menu-list-item">
+                  <label for="wifi">Wi-fi</label>
+                  <input type="checkbox" id="wifi"></li>
+              </ul>
+            </div>
+            <div class="filter-item">
+              <p>Тип жилья</p>
+              <ul class="select-menu-list">
+                <li class="select-menu-list-item">
+                  <label for="hotel">Гостиница</label>
+                  <input type="checkbox" id="hotel"></li>
+                <li class="select-menu-list-item">
+                  <label for="motel">Мотель</label>
+                  <input type="checkbox" id="motel"></li>
+                <li class="select-menu-list-item">
+                  <label for="apartments">Апартаменты</label>
+                  <input type="checkbox" id="apartments"></li>
+              </ul>
+            </div>
+            <div class="filter-item">
+              <!_Стоимость в сутки__>
+            </div>
           </form>
           <button type="button" class="btn-form">Показать</button>
         </section>
         <section class="result">
-          <p>Найдено: 3</p>
-          <p>Сортировка:</p>
-          <a href="#">По цене</a>
-          <a href="#">По типу</a>
-          <a href="#">По рейтингу</a>
+          <div class="result-title">
+            Найдено: 3
+          </div>
+          <div class="result-sort">
+            <p>Сортировка:</p>
+            <ul class="result-sort-list">
+              <li class="result-sort-list-item"><a href="#">По цене</a></li>
+              <li class="result-sort-list-item"><a href="#">По типу</a></li>
+              <li class="result-sort-list-item"><a href="#">По рейтингу</a></li>
+            </ul>
+          </div>
+          <div class="result-arrwos">
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
         </section>
-        <section class="result-item-amara">
-          <img src="#" alt="amara">
-          <b>Amara Resort & SPA</b>
-          <p>Гостиница от 3500р.</p>
-          <button type="button" class="btn-result-details">Подробнее</button>
-          <button type="button" class="btn-result-reserv">Забронировать</button>
-          <p>Рейтинг: 8,5</p>
-        </section>
-        <section class="result-item-desert">
-          <img src="#" alt="desert">
-          <b>Desert Quail Inn</b>
-          <p>Мотель от 2000р.</p>
-          <button type="button" class="btn-result-details">Подробнее</button>
-          <button type="button" class="btn-result-reserv">Забронировать</button>
-          <p>Рейтинг: 8,9</p>
-        </section>
-        <section class="result-item-villas">
-          <img src="#" alt="villas">
-          <b>Villas at poco diablo</b>
-          <p>Апартаменты от 4000р.</p>
-          <button type="button" class="btn-result-details">Подробнее</button>
-          <button type="button" class="btn-result-reserv">Забронировать</button>
-          <p>Рейтинг: 9,2</p>
-        </section>
+        <article class="result-wrapper">
+          <section class="result-item">
+            <div class="result-item-foto">
+              <img src="#" alt="amara">
+            </div>
+            <div class="result-item-content">
+              <b>Amara Resort & SPA</b>
+              <p>Гостиница от 3500р.</p>
+              <button type="button" class="btn-result-details">Подробнее</button>
+              <button type="button" class="btn-result-reserv">Забронировать</button>
+            </div>
+            <div class="result-item-rating">
+              <span></span><span></span><span></span><span></span>
+              <div>Рейтинг: 8,5</div>
+            </div>
+          </section>
+          <section class="result-item">
+            <div class="result-item-foto">
+              <img src="#" alt="desert">
+            </div>
+            <div class="result-item-content">
+              <b>Desert Quail Inn</b>
+              <p>Мотель от 2000р.</p>
+              <button type="button" class="btn-result-details">Подробнее</button>
+              <button type="button" class="btn-result-reserv">Забронировать</button>
+            </div>
+            <div class="result-item-rating">
+              <span></span><span></span><span></span><span></span>
+              <div>Рейтинг: 8,9</div>
+            </div>
+          </section>
+          <section class="result-item">
+            <div class="result-item-foto">
+              <img src="#" alt="villas">
+            </div>
+            <div class="result-item-content">
+              <b>Villas at poco diablo</b>
+              <p>Апартаменты от 4000р.</p>
+              <button type="button" class="btn-result-details">Подробнее</button>
+              <button type="button" class="btn-result-reserv">Забронировать</button>
+            </div>
+            <div class="result-item-rating">
+              <span></span><span></span><span></span><span></span>
+              <div>Рейтинг: 9,2</div>
+            </div>
+          </section>
+        </article>
       </main>
       <footer class="main-footer">
         <a href="#">#Visitsedona</a>

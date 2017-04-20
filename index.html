@@ -52,24 +52,24 @@
         <section class="features-img">
           <img src="#" alt="Мост дьявола">
           <div class="feature-image-descripption">
-            <h3>Там есть мост дьявола</h3>
+            <b>Там есть мост дьявола</b>
             <p>№2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </section>
         <section class="features-item features-grey">
           <div class="features-item">
-            <h3>Небольшая площадь</h3>
+            <b>Небольшая площадь</b>
             <p>№3</p>
             <p>Все достопримечательности находятся очень близко<p>
           </div>
           <div class="features-item">
-            <h3>Красивая дорога</h3>
+            <b>Красивая дорога</b>
             <p>№4</p>
             <p>Ехать в седону из лас-вегаса совсем не скучно!<p>
           </div>
           <div class="features-item">
-            <h3>Мало туристов</h3>
+            <b>Мало туристов</b>
             <p>№5</p>
             <p>Большинство едет в гранд каньон и толпится там<p>
           </div>
@@ -78,32 +78,42 @@
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button class="btn-search" type="button">Поиск гостиници в Седоне</button>
-          <form class="search-form" method="post">
-            <label for="date-in">Дата заезда:</label>
-            <input type="date" id="date-in">
-            <label for="date-off">Дата выезда:</label>
-            <input type="date" id="date-off">
-            <label for="adults">Взрослые</label>
-            <input type="number" id="adult">
-            <label for="children">Дети</label>
-            <input type="number" id="children">
-          </form>
-          <div class="map-container">
-            <img src="#" alt="Карта">
-          </div>
+            <div class="form-wrapper">
+              <form class="search-form" method="post">
+                <div class="form-item">
+                  <label for="date-in">Дата заезда:</label>
+                  <input type="date" id="date-in">
+                </div>
+                <div class="form-item">
+                  <label for="date-off">Дата выезда:</label>
+                  <input type="date" id="date-off">
+                </div>
+                <div class="form-item">
+                  <label for="adults">Взрослые</label>
+                  <input type="number" id="adult">
+                </div>
+                <div class="form-item">
+                  <label for="children">Дети</label>
+                  <input type="number" id="children">
+                </div>
+              </form>
+            </div>
         </section>
       </main>
-      <footer class="main-footer">
-        <a href="#">#Visitsedona</a>
-        <section class="footer-social">
-          <a href="#" class="social-btn social-btn-twt">Twitter</a>
-          <a href="#" class="social-btn social-btn-fb">Facebook</a>
-          <a href="#" class="social-btn social-btn-yt">Youtube</a>
-        </section>
-        <div class="footer-logo">
-          <img src="#" alt="HTML academy">
-        </div>
-      </footer>
+      <div class="map-wrapper">
+        <div class="map" id="map"></div>
+        <footer class="main-footer main-footer-map">
+          <a href="#">#Visitsedona</a>
+          <section class="footer-social">
+            <a href="#" class="social-btn social-btn-twt">Twitter</a>
+            <a href="#" class="social-btn social-btn-fb">Facebook</a>
+            <a href="#" class="social-btn social-btn-yt">Youtube</a>
+          </section>
+          <div class="footer-logo">
+            <img src="#" alt="HTML academy">
+          </div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
