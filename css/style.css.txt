@@ -1,0 +1,30 @@
+body {
+font-family: "PT Sans"
+font-size: 14px;
+line-height: 21px;
+color: #333333
+}
+
+.first-title {
+font-family: "PT Sans"
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+color: black;
+}
+
+.second-title {
+font-family: "PT Sans"
+font-weight: bold;
+font-size: 30px;
+line-height: 24px;
+color: black;
+}
+
+.third-title {
+font-family: "PT Sans"
+font-weight: bold;
+font-size: 21px;
+line-height: 21px;
+color: white;
+}
