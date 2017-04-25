@@ -1,0 +1,25 @@
+body {
+ font-family: "PT Sans";
+ font-size: 14px;
+ line-height: 21px;
+ color: #333333;
+}
+
+.first-title {
+ font-weight: 700;
+ font-size: 21px;
+ line-height: 26px;
+ color: #000000;
+}
+
+.second-title {
+ font-weight: 700;
+ font-size: 30px;
+ line-height: 24px;
+ color: #000000;
+}
+
+.main-container {
+ width: 1200px;
+ margin: 0 auto;
+}
