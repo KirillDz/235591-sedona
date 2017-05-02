@@ -21,7 +21,7 @@
           </ul>
         </nav>
         <div class="page-header-logo">
-          <img src="#" alt="Сity of Sedona">
+          <img src="img/city-of-sedona.png" alt="Сity of Sedona">
         </div>
       </header>
       <main>
@@ -45,7 +45,7 @@
               </ul>
             </div>
             <div class="filter-item">
-              <p>Тип жилья</p>
+              <p>Тип жилья:</p>
               <ul class="select-menu-list">
                 <li class="select-menu-list-item">
                   <input type="checkbox" id="hotel">
@@ -61,15 +61,26 @@
                 </li>
               </ul>
             </div>
-            <div class="filter-item">
-              <!_Стоимость в сутки__>
+            <div class="filter-range">
+              <div class="filter-range-title">Стоимость в сутки (р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+                </div>
+              <button type="button" class="btn-transparent">Показать</button>
             </div>
           </form>
-          <button type="button" class="btn-form">Показать</button>
         </section>
         <section class="result">
           <div class="result-title">
-            Найдено: 3
+            <p>Найдено: 3</p>
           </div>
           <div class="result-sort">
             <p>Сортировка:</p>
@@ -80,14 +91,14 @@
             </ul>
           </div>
           <div class="result-arrwos">
-            <a href="#"></a>
-            <a href="#"></a>
+            <a class="arrow arrow-up" href="#"></a>
+            <a class="arrow arrow-down" href="#"></a>
           </div>
         </section>
         <article class="result-wrapper">
           <section class="result-item">
             <div class="result-item-foto">
-              <img src="#" alt="amara">
+              <img src="img/amara.jpg" alt="amara">
             </div>
             <div class="result-item-content">
               <b>Amara Resort & SPA</b>
@@ -96,13 +107,13 @@
               <button type="button" class="btn-result-reserv">Забронировать</button>
             </div>
             <div class="result-item-rating">
-              <span></span><span></span><span></span><span></span>
+              <span>1</span>1<span>1</span>1<span>1</span>1<span>1</span>
               <div>Рейтинг: 8,5</div>
             </div>
           </section>
           <section class="result-item">
             <div class="result-item-foto">
-              <img src="#" alt="desert">
+              <img src="img/desert.jpg" alt="desert">
             </div>
             <div class="result-item-content">
               <b>Desert Quail Inn</b>
@@ -117,7 +128,7 @@
           </section>
           <section class="result-item">
             <div class="result-item-foto">
-              <img src="#" alt="villas">
+              <img src="img/villas.jpg" alt="villas">
             </div>
             <div class="result-item-content">
               <b>Villas at poco diablo</b>
@@ -126,7 +137,7 @@
               <button type="button" class="btn-result-reserv">Забронировать</button>
             </div>
             <div class="result-item-rating">
-              <span></span><span></span><span></span><span></span>
+              <span>1</span>1<span>1</span>1<span>1</span>1<span>1</span>
               <div>Рейтинг: 9,2</div>
             </div>
           </section>
