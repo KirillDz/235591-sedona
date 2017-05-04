@@ -49,6 +49,7 @@ body {
   top: -1px;
   width: 138px;
   height: 70px;
+  z-index: 1;
 }
 
 .main-nav-list {
@@ -56,7 +57,7 @@ body {
  justify-content: space-between;
  list-style: none;
  margin: 0;
- padding: 20px 0 20px;
+ padding: 15px 0 15px;
 }
 
 .main-nav-list a {
@@ -83,9 +84,20 @@ body {
 }
 
 .greeting {
+  position: relative;
  min-height: 508px;
  width: 100%;
  background: #ff0000 url("../img/bg-img-mountains.jpg") no-repeat;
+}
+
+.greeting::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/mask.png");
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
 }
 
 .greeting img {
@@ -157,63 +169,87 @@ body {
 }
 /*форма поиска*/
 .search-form {
- display: flex;
- width: 570px;
- height: 395px;
- flex-direction: column;
- padding: 56px 55px 55px 55px;
- box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 570px;
+  height: 395px;
+  padding: 56px 55px 55px 55px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  left: 50%;
+  margin-left: -285px;
+  z-index: 1;
 }
 
 .form-item {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-basis: 100%;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  padding-bottom: 31px;
 }
 
-.form-item:nth-of-type(1) label {
-  padding-right: 22px;
-  padding-top: 10px;
+.form-item input {
+  width: 346px;
+  height: 37px;
+  border: 0;
 }
 
-.form-item:nth-of-type(2) label {
-  padding-right: 19px;
-  padding-top: 10px;
+.form-item-date input {
+  background: #f2f2f2 url("../img/form-element.png") no-repeat 316px;
 }
 
-.form-item:nth-of-type(1) input,
-.form-item:nth-of-type(2) input {
-  flex-grow: 1;
-  background-color: #f2f2f2;
-  height: 38px;
+.form-item-date input:hover {
+  background: #f2f2f2 url("../img/form-element-hover.png") no-repeat 316px;
 }
 
-.form-item:nth-of-type(3),
-.form-item:nth-of-type(4) {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+.form-item-date input:active {
+  background: #f2f2f2 url("../img/form-element-active.png") no-repeat 316px;
 }
 
-.form-item:nth-of-type(3) label,
-.form-item:nth-of-type(4) label {
-  padding-top: 10px;
+.form-item-date input:focus {
+  background: #ffffff url("../img/form-element-active.png") no-repeat 316px;
 }
 
-.form-item:nth-of-type(3) input,
-.form-item:nth-of-type(4) input {
+label[for*="date-in"] {
+  padding-right: 18px;
+}
+
+label[for*="date-off"] {
+  padding-right: 14px;
+}
+
+label[for*="adults"] {
+  padding-right: 33px;
+}
+
+label[for*="children"] {
+  padding: 0 20px 0 50px;
+}
+
+.form-item-age {
+  position: relative;
+  flex-basis: 50%;
+  padding-bottom: 0;
+}
+
+.form-item-age input {
   width: 114px;
-  height: 39px;
+  height: 37px;
+  background: #f2f2f2 url("../img/plus-minus-static.png") no-repeat 14px;
 }
 
-.form-item:nth-of-type(3) {
-  flex-basis: 0%;
+.form-item-age input:hover {
+  background: #f2f2f2 url("../img/plus-minus-hover.png") no-repeat 14px;
 }
 
-.form-item:nth-of-type(4) {
-  align-self: flex-end;
-  padding-top: 0;
+.form-item-age input:active {
+  background: #f2f2f2 url("../img/plus-minus-active.png") no-repeat 14px;
+}
+
+.form-item-age input:focus {
+  background: #f2f2f2 url("../img/plus-minus-active.png") no-repeat 14px;
 }
 
 .btn-search-form {
@@ -225,6 +261,7 @@ body {
   line-height: 26px;
   background-color: #81b3d2;
   text-transform: uppercase;
+  border: 0;
 }
 
 .btn-search-form:hover {
@@ -243,6 +280,7 @@ body {
 }
 
 .offer {
+  position: relative;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -258,6 +296,7 @@ body {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  border: 0;
 }
 
 .map {
@@ -268,8 +307,20 @@ body {
 .main-footer {
  display: flex;
  justify-content: space-around;
+ align-items: center;
  padding: 47px 0 36px;
  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.map-wrapper {
+  position: relative;
+}
+
+.main-footer-map {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .main-footer a {
@@ -280,22 +331,68 @@ body {
   color: #000000;
 }
 
-.social-btn {
-  width: 46px;
-  height: 48px;
-  background-color: #81b3d2;
-  background-image: url(../img/twt-logo.png);
+.footer-social {
+  padding-left: 64px;
 }
 
-.footer-logo {
-  display: flex;
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background: #81b3d2 url("../img/btn-social.png") no-repeat 0 0;
+  margin-right: 6px;
+}
+
+.social-btn-twt {
+  background-position: 14px 14px;
+}
+
+.social-btn-fb {
+  background-position: -36px;
+}
+
+.social-btn-yt {
+  background-position: -89px;
+}
+
+.social-btn-twt:hover,
+.social-btn-fb:hover,
+.social-btn-yt:hover {
+  background-color: #669ec0;
+}
+
+.social-btn-twt:active,
+.social-btn-fb:active,
+.social-btn-yt:active {
+  background-color: #5496bd;
+}
+
+.footer-logo p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-logo a {
+  width: 114px;
+  height: 37px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../img/html-academy.png") no-repeat 1px;
+}
+
+.footer-logo a:hover {
+  background: url("../img/html-academy-hover.png") no-repeat 1px;
+}
+
+.footer-logo a:active {
+  background: url("../img/html-academy-active.png") no-repeat 1px;
 }
 
 
 /*inner*/
 
 .filters {
-  background-image: url(../img/filter-img-bg.jpg);
+  background: url("../img/filter-img-bg.jpg") no-repeat;
 }
 
 .filters form {
@@ -330,6 +427,39 @@ body {
   padding-top: 31px;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  background: url("../img/border-checkbox.png") no-repeat;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  background: url("../img/checkbox.png") no-repeat;
+}
+
 .filter-item p {
   font-size: 16px;
   line-height: 21px;
@@ -348,6 +478,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+  color: #ffffff;
 }
 
 .price-controls {
@@ -357,6 +488,7 @@ body {
   border: 2px solid #ffffff;
   border-radius: 2px;
   font-size: 0;
+  color: #ffffff;
 }
 
 .price-controls::after {
@@ -454,9 +586,9 @@ body {
 
 .result {
   width: 100%;
-  height: 86px;
   display: flex;
   align-items: center;
+  padding: 12px 0 8px 0;
 }
 
 .result-title {
@@ -496,12 +628,14 @@ body {
   color: #81b3d2;
 }
 
-.result-arrows div {
-  display: flex;
+.result-arrwos {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 6%;
 }
 
 .arrow {
-  padding-left: 150px;
+  display: inline-block;
 }
 
 .arrow::before {
@@ -511,6 +645,7 @@ body {
   border-left-width: 5px;
   border-left-color: transparent;
   border-right-color: transparent;
+  display: block;
 }
 
 .arrow-down::before {
@@ -520,6 +655,7 @@ body {
 .arrow-up::before {
   border-bottom: 0;
   transform: rotate(180deg);
+  margin-right: 11px;
 }
 
 .result-item {
@@ -549,10 +685,21 @@ body {
   margin: 0;
 }
 
-.result-item-content b {
+.result-item-content a {
+  text-decoration: none;
+  color: #000000;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.result-item-content a:hover {
+  color: #81b3d2;
+}
+
+.result-item-content a:active {
+  color: #000000;
+  opacity: 0.3;
 }
 
 .btn-result-details,
@@ -562,6 +709,8 @@ body {
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
+  font-family: "Pt Sans";
+  border: 0;
 }
 
 .btn-result-details {
@@ -569,16 +718,44 @@ body {
   width: 110px;
 }
 
+.btn-result-details:hover {
+  background-color: #669ec0;
+}
+
+.btn-result-details:active {
+  background-color: #5496bd;
+}
+
 .btn-result-reserv {
   background-color: #766357;
   width: 142px;
 }
 
+.btn-result-reserv:hover {
+  background-color: #604e43;
+}
+
+.btn-result-reserv:active {
+  background-color: #503e33;
+}
+
+.result-item-rating {
+  text-align: right;
+}
+
 .result-item-rating div {
   background-color: #f2f2f2;
-  padding: 10px 15px 9px 13px;
+  padding: 5px 15px 5px 13px;
 }
 
 .result-item:nth-of-type(3) {
   border-bottom: 1px solid rgb(229,229,229);
+}
+
+.result-item-rating span {
+  background: url("../img/star-rating.png") no-repeat;
+  width: 18px;
+  height: 17px;
+  display: inline-block;
+  margin-bottom: 40px;
 }
