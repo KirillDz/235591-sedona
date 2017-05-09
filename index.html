@@ -56,7 +56,7 @@
         </section>
         <section class="features-image">
           <img src="./img/img-canyon.jpg" class="foto-of-sedona" alt="Мост дьявола">
-          <div class="feature-image-description">
+          <div class="feature-image-description feature-image-description-devil">
             <b>Там есть <br> мост дьявола</b>
             <p class="resons-number">№2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -127,5 +127,15 @@
         </footer>
       </div>
     </div>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+    <script>
+      var link = document.querySelector(".btn-search");
+      var popup = document.querySelector(".form-wrapper");
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("form-wrapper-show");
+      });
+    </script>
   </body>
 </html>
