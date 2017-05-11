@@ -15,3 +15,9 @@ function init () {
         searchControlProvider: 'yandex#search'
     });
 }
+var link = document.querySelector(".btn-search");
+var popup = document.querySelector(".form-wrapper");
+link.addEventListener("click", function(event) {
+  event.preventDefault();
+  popup.classList.toglle("form-wrapper-show");
+});

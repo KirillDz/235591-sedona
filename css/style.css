@@ -31,6 +31,7 @@ body {
 .main-container {
  width: 1200px;
  margin: 0 auto;
+ box-shadow: 0 5px 17px rgba(0,0,0,.3);
 }
 
 .main-nav {
@@ -277,7 +278,7 @@ label[for*="date-off"] {
 }
 
 label[for*="adults"] {
-  padding-right: 39px;
+  padding-right: 38px;
 }
 
 label[for*="children"] {
@@ -503,8 +504,6 @@ label[for*="children"] {
 
 .filters form {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   padding: 27px 73px 6px 70px;
 }
 
@@ -559,14 +558,7 @@ input[type="checkbox"] + label::before {
   background: url("../img/border-checkbox.png") no-repeat;
 }
 
-input[type="checkbox"]:checked + label::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 0;
-  left: 0;
+input[type="checkbox"]:checked + label::before {
   background: url("../img/checkbox.png") no-repeat;
 }
 
