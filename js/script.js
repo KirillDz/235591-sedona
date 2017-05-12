@@ -19,5 +19,5 @@ var link = document.querySelector(".btn-search");
 var popup = document.querySelector(".form-wrapper");
 link.addEventListener("click", function(event) {
   event.preventDefault();
-  popup.classList.toglle("form-wrapper-show");
+  popup.classList.toggle("form-wrapper-show");
 });
