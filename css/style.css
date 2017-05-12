@@ -104,7 +104,7 @@ body {
   position: relative;
   min-height: 508px;
   width: 100%;
-  background: #ff0000 url("../img/bg-img-mountains.jpg") no-repeat 0px -56px;
+  background: #86adca url("../img/bg-img-mountains.jpg") no-repeat 0px -56px;
 }
 
 .greeting::after {
