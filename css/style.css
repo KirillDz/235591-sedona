@@ -447,7 +447,7 @@ label[for*="children"] {
 .map {
   width: 100%;
   min-height: 592px;
-  background-color: #cbdda9;
+  background: #cbdda9 url("../img/map.jpg");
 }
 
 .main-footer {
