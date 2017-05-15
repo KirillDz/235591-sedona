@@ -205,22 +205,58 @@ body {
   font-size: 21px;
   line-height: 21px;
 }
-/*форма поиска*/
-/*
+
 .form-wrapper {
   display: none;
+  z-index: 10;
+}
+
+.form-wrapper-visible {
+  display: block;
 }
 
 .form-wrapper-show {
   display: block;
+  -webkit-animation: open-popup 0.6s;
+  animation: open-popup 0.6s;
 }
-*/
 
-@@keyframes bounce {
-  0% {transform: translateY(-2000px);}
-  70% {transform: translateY(30px);}
-  90% {transform: translateY(-10px);}
-  100% {transform: translateY(0px);}
+@-webkit-keyframes open-popup {
+  0%   {
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+  70%  {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  90%  {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes open-popup {
+  0%   {
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+  70%  {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  90%  {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 .search-form {
@@ -243,6 +279,9 @@ body {
   line-height: 26px;
   font-weight: 700;
   padding-bottom: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .form-item-date {
@@ -266,6 +305,7 @@ body {
   top: 0;
   right: 3px;
   border: 0;
+  font-size: 0;
   background: #f2f2f2 url("../img/form-element.png") no-repeat 12px 7px;
 }
 
@@ -277,17 +317,6 @@ body {
   background: #f2f2f2 url("../img/form-element-active.png") no-repeat 12px 7px;
 }
 
-label[for*="date-in"] {
-  padding-right: 18px;
-}
-
-label[for*="date-off"] {
-  padding-right: 14px;
-}
-
-label[for*="adults"] {
-  padding-right: 38px;
-}
 
 label[for*="children"] {
   padding: 0 21px 0 50px;
@@ -312,6 +341,7 @@ label[for*="children"] {
   width: 30px;
   height: 30px;
   border: 0;
+  font-size: 0;
 }
 
 .btn-minus-adults {
@@ -457,6 +487,11 @@ label[for*="children"] {
   height: 48px;
   background: #81b3d2 url("../img/btn-social.png") no-repeat 0 0;
   margin: 0 3px -8px 0;
+  font-size: 0;
+}
+
+.footer-social a {
+  font-size: 0;
 }
 
 .social-btn-twt {
@@ -493,6 +528,7 @@ label[for*="children"] {
   height: 37px;
   display: inline-block;
   vertical-align: middle;
+  font-size: 0;
   background: url("../img/html-academy.png") no-repeat 1px;
 }
 
@@ -756,6 +792,10 @@ input[type="checkbox"]:checked + label::before {
   text-align: right;
 }
 
+.result-arrwos a {
+  font-size: 0;
+}
+
 .arrow {
   display: inline-block;
   width: 12px;
@@ -891,6 +931,7 @@ input[type="checkbox"]:checked + label::before {
   display: inline-block;
   margin-bottom: 40px;
   padding-right: 4px;
+  font-size: 0;
 }
 
 .result-item-rating div {

@@ -17,6 +17,11 @@ function init () {
 }
 var link = document.querySelector(".btn-search");
 var popup = document.querySelector(".form-wrapper");
+
+if (popup) {
+  popup.classList.remove("form-wrapper-visible");
+}
+
 link.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.toggle("form-wrapper-show");
